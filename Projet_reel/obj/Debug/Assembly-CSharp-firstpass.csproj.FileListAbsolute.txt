@@ -1,0 +1,12 @@
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Arnaud\Documents\Projet_reel\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Arnaud\Documents\Projet_reel\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+C:\Users\Arnaud\Documents\Projet_reel\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Arnaud\Documents\Projet_reel\obj\Debug\Assembly-CSharp-firstpass.pdb
