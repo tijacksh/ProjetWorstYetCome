@@ -15,7 +15,6 @@ using System.Collections;
 public class ObjectPhysics : MonoBehaviour
 {
     
-
     public float pushForce = 2.0f;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -26,15 +25,13 @@ public class ObjectPhysics : MonoBehaviour
         if (body == null || body.isKinematic)
             return;
 
-        if (hit.moveDirection.y < -.3f)
+        if (hit.moveDirection.y < -.2f)
             return;
 
         //set up push direction for object
         Vector3 pushDirection = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
         //apply push force to object
-        body.velocity = pushForce * pushDirection;
+		body.velocity = pushForce * 4 * pushDirection;
     }
-
-
 }

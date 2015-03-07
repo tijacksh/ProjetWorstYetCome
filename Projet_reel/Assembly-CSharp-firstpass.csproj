@@ -48,15 +48,12 @@
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Bend.cs" />
      <Compile Include="Assets\Standard Assets\Bounciness.cs" />
-     <Compile Include="Assets\Standard Assets\CameraFollower.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\DeleteObject.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Standard Assets\CharacterController.cs" />
      <Compile Include="Assets\Standard Assets\DeleteObject.cs" />
      <Compile Include="Assets\Standard Assets\ObjectPhysics.cs" />
      <Compile Include="Assets\Standard Assets\PushRigidbodies.cs" />
      <Compile Include="Assets\Standard Assets\ResetBall.cs" />
-     <Compile Include="Assets\Standard Assets\ScoreController.cs" />
      <Compile Include="Assets\Standard Assets\Shoot.cs" />
      <Compile Include="Assets\Standard Assets\StopMomentum.cs" />
      <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
