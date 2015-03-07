@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{E84C6C3D-8A48-3621-FAF8-DCA82B0CD3F1}") = "Projet_reel", "Assembly-CSharp-firstpass-vs.csproj", "{195C702D-C378-DE73-4A57-B807838C9A67}"
 EndProject
+Project("{E84C6C3D-8A48-3621-FAF8-DCA82B0CD3F1}") = "Projet_reel", "Assembly-CSharp-vs.csproj", "{5A390EE3-EEC8-A00D-9224-A2200E24BE32}"
+EndProject
 Project("{E84C6C3D-8A48-3621-FAF8-DCA82B0CD3F1}") = "Projet_reel", "Assembly-CSharp-Editor-vs.csproj", "{6686A5A6-BE0A-BB57-1451-3B96D94838A1}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{195C702D-C378-DE73-4A57-B807838C9A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195C702D-C378-DE73-4A57-B807838C9A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195C702D-C378-DE73-4A57-B807838C9A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A390EE3-EEC8-A00D-9224-A2200E24BE32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A390EE3-EEC8-A00D-9224-A2200E24BE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A390EE3-EEC8-A00D-9224-A2200E24BE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A390EE3-EEC8-A00D-9224-A2200E24BE32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6686A5A6-BE0A-BB57-1451-3B96D94838A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6686A5A6-BE0A-BB57-1451-3B96D94838A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6686A5A6-BE0A-BB57-1451-3B96D94838A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
+																																																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
