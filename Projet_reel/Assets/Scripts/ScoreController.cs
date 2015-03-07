@@ -6,27 +6,53 @@ public class ScoreController : MonoBehaviour {
 
 	Text text;
 
-	public static Transform ball;
+	private Vector3 initialPos;
+	private Quaternion originalRotation;
 
-	public static int PlayerScore;
+	private float lol;
+	
+
+	public static int Team1Score, Team2Score;
 	// Use this for initialization
 	void Awake()
 	{
 		text = GetComponent <Text> ();
-		PlayerScore = 0;
+		Team1Score = 0;
+		Team2Score = 0;
+
+		initialPos = transform.position;
+		originalRotation = transform.rotation;
 	}
 
 	void Update ()
 	{
-		IncreasePlayerScore ();
+		lol = transform.position.x;
+
+		int caca = Team1Score-1;
+
+		if (lol <= -84.4)
+		{
+			Team2Score++;
+			resetBall();
+		}
+
+		else if (lol >= 84)
+		{
+			Team1Score = (Team1Score +1) + Team1Score - (caca);
+			resetBall();
+		}
+
+		else
+		{
+			Team1Score = Team1Score -1;
+		}
+
+		text.text = Team1Score + "       -      " + Team2Score;
 	}
 
-	void IncreasePlayerScore()
+	void resetBall()
 	{
-		if ((ball.position.z > -4.85) && (ball.position.z < 4.8) && ball.position.x < -5) {
-			PlayerScore = PlayerScore + 1;	
-			ball.rigidbody.position = new Vector3(0, 0.6F, 0);
-		}
-		text.text = PlayerScore + "       -";
+		transform.position = initialPos;
+		transform.rotation = originalRotation;
 	}
 }
