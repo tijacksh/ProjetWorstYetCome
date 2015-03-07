@@ -11,7 +11,7 @@ public class ResetBall : MonoBehaviour {
 
 	Text instruction;
 
-	// Use this for initialization
+	// Use this for initializatio
 	void Start () 
 	{
 		initialPos = transform.position;
