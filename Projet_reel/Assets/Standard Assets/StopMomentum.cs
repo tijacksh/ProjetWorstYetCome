@@ -3,13 +3,14 @@ using System.Collections;
 
 public class StopMomentum : MonoBehaviour
 {
+	public float changeSpeed;
+
 	// Update is called once per frame
-	void OnTriggerEnter(Collider other) 
-    {
-		if (Input.GetKeyDown(KeyCode.S))
-		{
-        	rigidbody.velocity = Vector3.zero;
-			rigidbody.angularVelocity = Vector3.zero;
-		}
+	void FixedUpdate()
+	{
+		float speed = 1;
+		changeSpeed = 0.2f;
+			speed -= Time.deltaTime * 0.98f;
+			rigidbody.velocity = rigidbody.velocity * speed;
 	}
 }
