@@ -65,42 +65,28 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-		//dir = rigidbody.transform.position - transform.position;
-		//dir = dir.normalized;
-		
-		/*if (Input.GetKeyDown (KeyCode.C)) 
-		{
-			float dist = 4F;
-			RaycastHit hit;
-			Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-			if (Physics.Raycast(transform.position, fwd, out hit))
-				dist = hit.distance;
-
-			if (dist <= 1f && dist > -1f)
-				print("There is something in front of the object!");
-			else
-				print("xxx");
-		}*/
-
-		//Vector3 fwd = transform.TransformDirection(Vector3.forward);
-		//RaycastHit hit;
-
-		//Vector3 forceDirection = Camera.current.transform.forward;
-		//forceDirection = new Vector3( forceDirection.x, 0, forceDirection.y );
-		/*
-		if (Physics.Raycast (transform.position, fwd, out hit))
-	 	{
-			if (Input.GetKey (KeyCode.C))
-				rigidbody.AddRelativeForce( forceDirection.normalized * 100 );
-		}*/
 		rigidbody.transform.LookAt(Camera.current.transform);
 
-		if (Input.GetKey(KeyCode.C))
-			rigidbody.AddForce(-transform.forward * 500);
-		
-		if (Input.GetKey(KeyCode.R))
-            rigidbody.AddForce(-transform.forward * 100);
+		Vector3 fwd = transform.forward;
+		RaycastHit hit;
+
+		float dist = 4F;
+
+		if (Physics.Raycast(transform.position, fwd, out hit))
+		{
+			dist = hit.distance;
+
+			if (Input.GetKey(KeyCode.C) && dist <= 1f && dist > -1f)
+			{
+				rigidbody.AddForce(-transform.forward * 2500);
+			}
+
+			else if (Input.GetKey(KeyCode.E) && dist <= 1f && dist > -1f)
+			{
+				rigidbody.AddForce (-transform.forward * 1500);
+				rigidbody.AddForce (transform.up * 5000);
+			}
+		}
 
         if (Input.GetKey(KeyCode.G))
 		{

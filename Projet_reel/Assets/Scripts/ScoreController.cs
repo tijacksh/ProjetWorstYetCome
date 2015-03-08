@@ -17,7 +17,7 @@ public class ScoreController : MonoBehaviour {
 	void Awake()
 	{
 		text = GetComponent <Text> ();
-		Team1Score = 0;
+		Team1Score = 1;
 		Team2Score = 0;
 
 		initialPos = transform.position;
@@ -26,6 +26,7 @@ public class ScoreController : MonoBehaviour {
 
 	void Update ()
 	{
+		/*
 		lol = transform.position.x;
 
 		int caca = Team1Score-1;
@@ -36,7 +37,7 @@ public class ScoreController : MonoBehaviour {
 			resetBall();
 		}
 
-		else if (lol >= 84)
+		else if (lol == 67.3)
 		{
 			Team1Score = (Team1Score +1) + Team1Score - (caca);
 			resetBall();
@@ -45,6 +46,15 @@ public class ScoreController : MonoBehaviour {
 		else
 		{
 			Team1Score = Team1Score -1;
+		}
+
+		text.text = Team1Score + "       -      " + Team2Score;
+		*/
+
+		if (transform.position.x > 670.3f)
+		{ 
+			//Team1Score++;
+			resetBall();
 		}
 
 		text.text = Team1Score + "       -      " + Team2Score;
