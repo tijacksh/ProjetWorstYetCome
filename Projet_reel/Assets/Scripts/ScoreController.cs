@@ -3,15 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreController : MonoBehaviour {
-
+	
 	Text text;
-
+	
 	private Vector3 initialPos;
 	private Quaternion originalRotation;
-
+	
 	private float lol;
 	
-
+	
 	public static int Team1Score, Team2Score;
 	// Use this for initialization
 	void Awake()
@@ -19,11 +19,11 @@ public class ScoreController : MonoBehaviour {
 		text = GetComponent <Text> ();
 		Team1Score = 1;
 		Team2Score = 0;
-
+		
 		initialPos = transform.position;
 		originalRotation = transform.rotation;
 	}
-
+	
 	void Update ()
 	{
 		/*
@@ -50,19 +50,20 @@ public class ScoreController : MonoBehaviour {
 
 		text.text = Team1Score + "       -      " + Team2Score;
 		*/
-
+		
 		if (transform.position.x > 670.3f)
 		{ 
 			//Team1Score++;
 			resetBall();
 		}
-
-		text.text = Team1Score + "       -      " + Team2Score;
+		
+		//text.text = Team1Score + "       -      " + Team2Score;
 	}
-
+	
 	void resetBall()
 	{
 		transform.position = initialPos;
 		transform.rotation = originalRotation;
 	}
 }
+

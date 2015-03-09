@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollower : MonoBehaviour {
 
-	public Transform target;            
+	/*public Transform target;            
 	public float smoothing = 5f;        
 	
 	Vector3 offset;                     
@@ -17,9 +17,10 @@ public class CameraFollower : MonoBehaviour {
 	void FixedUpdate ()
 	{
 
-		Vector3 targetCamPos = target.position + offset;
+		Vector3 targetCamPos = target.position + offset * 1.5f;
 		
 
 		transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
-	}
+	}*/
+
 }

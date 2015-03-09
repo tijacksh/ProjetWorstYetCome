@@ -30,7 +30,7 @@ var walkSpeed = 2.0;
 // after trotAfterSeconds of walking we trot with trotSpeed
 var trotSpeed = 4.0;
 // when pressing "Fire3" button (cmd) we start running
-var runSpeed = 6.0;
+var runSpeed = 10.0;
 
 var inAirControlAcceleration = 3.0;
 

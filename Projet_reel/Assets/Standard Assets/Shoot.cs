@@ -1,76 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
-{/*
+{
+	Text text;
 
-    CharacterController thePlayer;
-    Transform ParentPart = null;    //An empty object which is parented in front of the player
-    float PickUpDistance = 2.4f;
-    bool canPickUp = false;
-    bool parented = false;
-    float dist;
-
-    void Start()
-    {
-        thePlayer = GetComponent<CharacterController>();
-        dist = 0f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //is the player near enough to the football to pick it up?
-        dist = Vector3.Distance(thePlayer.transform.position, transform.position);
-        if (dist <= PickUpDistance) { canPickUp = true; } else { canPickUp = false; }
-
-        //take the ball (parent it to the empty objekt which is parented to the player)
-        if (Input.GetButtonDown("Fire2") && canPickUp)
-        {
-            transform.parent = ParentPart;
-            parented = true;
-        }
-
-        //Shoot
-        if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.C) && parented)
-        {
-            parented = false;
-            transform.parent = null;
-            transform.rigidbody.constraints = RigidbodyConstraints.None;
-
-            transform.rigidbody.AddForce(thePlayer.velocity + thePlayer.transform.forward * 100);
-        }
-
-        //set the balls position to the position of the empty
-        if (parented)
-        {
-            transform.position = ParentPart.position;
-            transform.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-        }
-    }
-    */
-
+	public static int Team1Score, Team2Score;
 
 	private Vector3 initialPos;
     private Quaternion originalRotation;
 
-    void Start()
+	void Awake()
     {
         initialPos = transform.position;
         originalRotation = transform.rotation;
+		
+		text = GetComponent <Text> ();
+		Team1Score = 0;
+		Team2Score = 0;
     }
 
-    CharacterController player;
 	Vector3 dir;
 
     void Update()
-    {
+	{
 		rigidbody.transform.LookAt(Camera.current.transform);
 
-		Vector3 fwd = transform.forward;
 		RaycastHit hit;
 
 		float dist = 4F;
+
+
+
+		Vector3 fwd = transform.TransformDirection (Vector3.forward);
 
 		if (Physics.Raycast(transform.position, fwd, out hit))
 		{
@@ -78,13 +41,13 @@ public class Shoot : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.C) && dist <= 1f && dist > -1f)
 			{
-				rigidbody.AddForce(-transform.forward * 2500);
+				rigidbody.AddForce(-transform.forward * 5000);
 			}
 
 			else if (Input.GetKey(KeyCode.E) && dist <= 1f && dist > -1f)
 			{
 				rigidbody.AddForce (-transform.forward * 1500);
-				rigidbody.AddForce (transform.up * 5000);
+				rigidbody.AddForce (transform.up * 1000);
 			}
 		}
 
@@ -102,5 +65,28 @@ public class Shoot : MonoBehaviour
 			rigidbody.velocity = Vector3.zero;
 			rigidbody.angularVelocity = Vector3.zero;
 		}
+
+		if (rigidbody.position.x < -84.4)
+		{
+			Team2Score++;
+			reset ();
+		}			
+
+		if (rigidbody.position.x > 67.3f)
+		{
+			Team1Score++;
+			reset ();
+		}
+		
+		text.text = Team1Score + "       -      " + Team2Score;
+	}
+
+	void reset()
+	{
+		transform.position = initialPos;
+		transform.rotation = originalRotation;
+		
+		rigidbody.velocity = Vector3.zero;
+		rigidbody.angularVelocity = Vector3.zero;
 	}
 }

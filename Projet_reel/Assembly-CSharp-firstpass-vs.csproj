@@ -58,6 +58,7 @@
      <Compile Include="Assets\Standard Assets\PushRigidbodies.cs" />
      <Compile Include="Assets\Standard Assets\ResetBall.cs" />
      <Compile Include="Assets\Standard Assets\ScoreController.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
      <Compile Include="Assets\Standard Assets\Shoot.cs" />
      <Compile Include="Assets\Standard Assets\StopMomentum.cs" />
      <Compile Include="Assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
