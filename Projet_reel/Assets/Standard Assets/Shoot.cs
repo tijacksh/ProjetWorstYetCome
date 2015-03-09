@@ -25,6 +25,8 @@ public class Shoot : MonoBehaviour
 
     void Update()
 	{
+		change ();
+
 		rigidbody.transform.LookAt(Camera.current.transform);
 
 		RaycastHit hit;
@@ -79,6 +81,12 @@ public class Shoot : MonoBehaviour
 		}
 		
 		text.text = Team1Score + "       -      " + Team2Score;
+	}
+
+	void change()
+	{
+		if (Input.GetKeyDown (KeyCode.T))
+			Application.LoadLevel ("voivlavoila");
 	}
 
 	void reset()

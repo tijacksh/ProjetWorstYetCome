@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour {
 	
 	void FixedUpdate ()
 	{
+		change ();
+
 		// Store the input axes.
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
@@ -37,7 +39,13 @@ public class CharacterController : MonoBehaviour {
 		// Animate the player.
 		Animating (h, v);
 	}
-	
+
+	void change()
+	{
+		if (Input.GetKeyDown (KeyCode.T))
+			Application.LoadLevel ("TerrainFoot");
+	}
+
 	void Move (float h, float v)
 	{
 		// Set the movement vector based on the axis input.
